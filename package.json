@@ -1,0 +1,34 @@
+{
+  "private": true,
+  "name": "quitter-status",
+  "version": "0.0.1",
+  "description": "Monitors the status of popular Quitter (GNU Social) instances.",
+  "author": "Resi Respati <resir014@gmail.com>",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "eslint-config-xo-angular": "^0.1.0",
+    "eslint-plugin-angular": "^0.15.0",
+    "grunt": "^0.4.5",
+    "grunt-jekyll": "^0.4.3",
+    "grunt-scss-lint": "^0.3.8",
+    "grunt-xo": "^0.8.0",
+    "load-grunt-tasks": "^3.3.0"
+  },
+  "xo": {
+    "envs": [
+      "node",
+      "browser",
+      "jquery"
+    ],
+    "rules": {
+      "no-alert": 0,
+      "guard-for-in": 0
+    },
+    "space": true
+  }
+}

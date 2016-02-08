@@ -1,0 +1,52 @@
+html {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+}
+
+html {
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  background-color: #333;
+  color: #e3e3e3;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+a {
+  color: #47f;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+table{
+  width: 100%;
+  margin-bottom: 1rem;
+  font-size: 85%;
+  border-collapse: collapse;
+  border: 1px solid #eee;
+}
+
+td, th {
+  padding: .25rem .5rem;
+  border: 1px solid #eee;
+}
+
+th {
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) td,
+tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}

@@ -1,0 +1,26 @@
+---
+layout: default
+title: Home
+---
+
+<header>
+  <h1>{{ site.title }}</h1>
+</header>
+<div ng-controller="InstanceStatusController">
+  <ul class="unstyled">
+    <li ng-repeat="instance in instances">
+      <strong>{% raw %}{{ instance.name }}{% endraw %}</strong>
+      <span ng-class="instance.isUp == true ? 'status-up' : 'status-down'">
+        is {% raw %}{{ instance.isUp == true ? 'up' : 'down' }}{% endraw %}
+      </span>
+    </li>
+  </ul>
+</div>
+<footer>
+  <small>
+    yeah, sorry for the mess. it will *probably* look much better tomorrow.
+  </small>
+  <small>
+    this website is made by <a href="https://quitter.is/resi" target="_blank">@resi</a>. give him a pat on the back, maybe.
+  </small>
+</footer>

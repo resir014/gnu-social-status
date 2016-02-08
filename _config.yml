@@ -1,0 +1,34 @@
+# Permalinks
+permalink:            pretty
+
+# Dependencies
+markdown:             kramdown
+highlighter:          rouge
+
+# Site details
+title:                quitter network status
+description:          "Monitors the status of popular Quitter/GNU Social instances."
+url:                  https://resir014.github.io
+baseurl:              "/quitter-status"
+
+# Build setup
+source:               src
+destination:          _site
+exclude:              ["Makefile", "Gruntfile.js", "Gemfile", "README.md", "LICENSE", "node_modules", "bower_components", "package.json", "bower.json"]
+
+# Assets
+#
+# We specify the directory for Jekyll so we can use @imports.
+sass:
+  sass_dir:           _sass
+  style:              :compressed
+
+# List of time zones supported in the TZ database
+# http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone:             Asia/Jakarta
+
+# About/contact
+author:
+  name:               Resi Respati
+  url:                https://quitter.is/resi
+  email:              resir014@gmail.com
