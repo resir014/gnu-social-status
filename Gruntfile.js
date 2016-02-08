@@ -15,8 +15,6 @@ module.exports = function (grunt) {
           bundleExec: true,
           serve: true,
           config: '_config.yml',
-          src: 'src',
-          dest: '_site'
         }
       }
     },
@@ -24,7 +22,7 @@ module.exports = function (grunt) {
     // Lint SCSS files using scss-lint
     scsslint: {
       files: [
-        'src/_sass/*.scss'
+        '_sass/*.scss'
       ],
       options: {
         bundleExec: true,
@@ -38,7 +36,7 @@ module.exports = function (grunt) {
       options: {
         quiet: true
       },
-      source: ['src/**/*.js'],
+      source: ['js/**/*.js'],
       gruntfile: ['Gruntfile.js']
     }
 

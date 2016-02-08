@@ -12,7 +12,6 @@ url:                  https://resir014.github.io
 baseurl:              "/quitter-status"
 
 # Build setup
-source:               src
 exclude:              ["Makefile", "Gruntfile.js", "Gemfile", "README.md", "LICENSE", "node_modules", "bower_components", "package.json", "bower.json"]
 
 # Assets
