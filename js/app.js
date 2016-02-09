@@ -32,6 +32,11 @@ app.controller('InstanceStatusController', function ($scope, $http) {
       apiUrl: 'https://quitter.es/api/statuses/public_timeline.as'
     },
     {
+      name: 'quitter.im',
+      url: 'https://quitter.im/',
+      apiUrl: 'https://quitter.im/api/statuses/public_timeline.as'
+    },
+    {
       name: 'gnusocial.de',
       url: 'https://gnusocial.de/',
       apiUrl: 'https://gnusocial.de/api/statuses/public_timeline.as'
