@@ -3,6 +3,8 @@
 var app = angular.module('gsStatusApp', []);
 
 app.controller('InstanceStatusController', function ($scope, $http) {
+  var i;
+
   $scope.instances = [
     {
       name: 'quitter.se',
@@ -46,26 +48,26 @@ app.controller('InstanceStatusController', function ($scope, $http) {
     }
   ];
 
-  var resetState = function (i) {
-    $scope.instances[i].isUp = null;
+  var resetState = function (key) {
+    $scope.instances[key].isUp = null;
   };
 
-  for (var i in $scope.instances) {
+  for (i in $scope.instances) {
     resetState(i);
   }
 
-  var getStatus = function (i) {
-    $http.get($scope.instances[i].url).then(
+  var getStatus = function (key) {
+    $http.get($scope.instances[key].url).then(
       function () {
-        $scope.instances[i].isUp = true;
+        $scope.instances[key].isUp = true;
       },
       function () {
-        $scope.instances[i].isUp = false;
+        $scope.instances[key].isUp = false;
       }
     );
   };
 
-  for (var i in $scope.instances) {
+  for (i in $scope.instances) {
     getStatus(i);
   }
 });
