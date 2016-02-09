@@ -7,22 +7,18 @@ app.controller('InstanceStatusController', function ($scope, $http) {
     {
       name: 'quitter.se',
       url: 'https://quitter.se',
-      isUp: false
     },
     {
       name: 'quitter.is',
       url: 'https://quitter.is',
-      isUp: false
     },
     {
       name: 'quitter.no',
       url: 'https://quitter.no',
-      isUp: false
     },
     {
       name: 'quitter.nu',
       url: 'https://quitter.nu',
-      isUp: false
     }
   ];
 
