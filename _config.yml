@@ -6,7 +6,7 @@ markdown:             kramdown
 highlighter:          rouge
 
 # Site details
-title:                quitter network status
+title:                quitter (GNU Social) network status
 description:          "Monitors the status of popular Quitter/GNU Social instances."
 url:                  https://resir014.github.io
 baseurl:              "/quitter-status"

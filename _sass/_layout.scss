@@ -1,11 +1,31 @@
+header {
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+
+  img {
+    display: inline-block;
+  }
+
+  h1 {
+    margin: 0;
+  }
+}
+
 .container {
   max-width: 48rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
-footer small {
-  display: block;
+footer {
+  padding: 1rem 0;
+  margin-top: 3rem;
+  border-top: 1px solid darken(#212121, 2.5%);
+
+  small {
+    display: block;
+  }
 }

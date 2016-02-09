@@ -14,7 +14,7 @@ module.exports = function (grunt) {
         options: {
           bundleExec: true,
           serve: true,
-          config: '_config.yml',
+          config: '_config.yml'
         }
       }
     },
