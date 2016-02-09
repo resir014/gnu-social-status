@@ -9,3 +9,10 @@
 .status-down {
   background-color: #300;
 }
+
+.message {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: #ddd;
+  background-color: darken(#212121, 2.5%);
+}

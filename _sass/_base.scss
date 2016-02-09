@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  color: #e3e3e3;
+  color: #ddd;
   background-color: #212121;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -48,5 +48,6 @@ td, th {
 }
 
 th {
+  color: #fff;
   background-color: darken(#212121, 1%);
 }
