@@ -2,6 +2,16 @@
 
 > Monitors the status of popular Quitter (GNU Social) instances.
 
+This website checks the status of popular Quitter (GNU Social) instances. Currently, only a handful of instances are included (preferably those that support Qvitter), but [let me know](https://quitter.is/resi) if you want your instance added here and I'll consider it.
+
+This website was made mostly when waiting for quitter.is to go back up after the 9th February downtime. I know. Blame [@hundur](https://quitter.is/hundur).
+
+## How this works
+
+Upon loading, this website will perform an HTTP request from your local connection, and returns a success message if the request completed successfully, and will be displayed on the page.
+
+While this website is really useful for many people, the results on this page might not be accurate. Because HTTP requests are made locally, it could only be your internet that's acting up.
+
 ## Running locally
 
 You will need:
