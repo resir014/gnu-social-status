@@ -43,12 +43,16 @@ app.controller('InstanceStatusController', function ($scope, $http) {
     {
       name: 'Shitposter Club',
       url: 'https://shitposter.club'
-    },
-    {
-      name: 'LoadAverage',
-      url: 'https://loadaverage.org/'
     }
   ];
+
+  var resetState = function (i) {
+    $scope.instances[i].isUp = null;
+  };
+
+  for (var i in $scope.instances) {
+    resetState(i);
+  }
 
   var getStatus = function (i) {
     $http.get($scope.instances[i].url).then(

@@ -16,8 +16,8 @@ title: Home
       <tr class="instance" ng-repeat="instance in instances">
         <td class="instance-name">{% raw %}{{ instance.name }}{% endraw %}</td>
         <td><a href="{% raw %}{{ instance.url }}{% endraw %}" target="_blank">[url]</a></td>
-        <td class="instance-status" ng-class="instance.isUp == true ? 'status-up' : 'status-down'">
-          {% raw %}{{ instance.isUp == true ? 'up' : 'down' }}{% endraw %}
+        <td class="instance-status" ng-class="instance.isUp === null ? 'status-error' : (instance.isUp == true ? 'status-up' : 'status-down')">
+          {% raw %}{{ instance.isUp === null ? 'wait...' : (instance.isUp == true ? 'up' : 'down') }}{% endraw %}
         </td>
       </tr>
     </tbody>

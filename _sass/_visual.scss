@@ -10,6 +10,12 @@
   background-color: #300;
 }
 
+.status-loading,
+.status-not-available,
+.status-error {
+  background-color: #330;
+}
+
 .message {
   padding: 1rem;
   margin-bottom: 1rem;
