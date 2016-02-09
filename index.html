@@ -4,8 +4,17 @@ title: Home
 ---
 
 <section>
-  <p>Confused about how GNU Social works? Read the <a href="https://karp.id.au/social/user/">unofficial user manual</a>!</p>
+  <p>
+    Welcome! This website checks the status of popular Quitter (GNU Social) instances. Currently, only a handful of instances are included (preferably those that support Qvitter), but <a href="https://quitter.is/resi">let me know</a> if you want your instance added here and I'll consider it.
+  </p>
+  <p>
+    Confused about how GNU Social works? Read the <a href="https://karp.id.au/social/user/">unofficial user manual</a>!
+  </p>
 </section>
+
+<div class="message">
+  <strong>Heads up!</strong> The results that you see on this page might not be accurate. Because HTTP requests are made locally, sometimes it might only be your internet that's acting up.
+</div>
 
 <div class="instance-status" ng-controller="InstanceStatusController">
   <table>
@@ -26,8 +35,4 @@ title: Home
       </tr>
     </tbody>
   </table>
-</div>
-
-<div class="message">
-  <strong>Heads up!</strong> Safari users might run into issues when trying to load the current status for quitter.is, as pointed out by <a href="https://quitter.is/notice/891602">@syfaro</a>.
 </div>
