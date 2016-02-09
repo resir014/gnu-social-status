@@ -1,0 +1,19 @@
+{
+  "version": "0.1.0",
+  "command": "grunt",
+  "isShellCommand": true,
+  "tasks": [
+    {
+      "taskName": "default",
+      "args": [],
+      "isBuildCommand": false,
+      "isTestCommand": true
+    },
+    {
+      "taskName": "serve",
+      "args": [],
+      "isBuildCommand": true,
+      "isTestCommand": false
+    }
+  ]
+}
