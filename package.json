@@ -26,8 +26,7 @@
       "jquery"
     ],
     "rules": {
-      "no-alert": 0,
-      "guard-for-in": 0
+      "no-alert": 0
     },
     "space": true
   }
