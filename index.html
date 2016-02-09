@@ -11,8 +11,8 @@ title: Home
   <table>
     <thead>
       <tr>
-        <th>Instance</th>
-        <th>Current status</th>
+        <th class="col-instance-name">Instance</th>
+        <th class="col-instance-status">Status</th>
       </tr>
     </thead>
     <tbody>
@@ -21,7 +21,7 @@ title: Home
           <a href="{% raw %}{{ instance.url }}{% endraw %}" target="_blank">{% raw %}{{ instance.name }}{% endraw %}</a>
         </td>
         <td class="instance-status" ng-class="instance.isUp === null ? 'status-error' : (instance.isUp == true ? 'status-up' : 'status-down')">
-          {% raw %}{{ instance.isUp === null ? 'wait...' : (instance.isUp == true ? 'up' : 'down') }}{% endraw %}
+          {% raw %}{{ instance.isUp === null ? 'contacting server...' : (instance.isUp == true ? 'connection OK' : 'connection failed') }}{% endraw %}
         </td>
       </tr>
     </tbody>

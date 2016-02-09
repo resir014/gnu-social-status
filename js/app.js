@@ -8,43 +8,58 @@ app.controller('InstanceStatusController', function ($scope, $http) {
   $scope.instances = [
     {
       name: 'quitter.se',
-      url: 'https://quitter.se'
+      url: 'https://quitter.se/',
+      apiUrl: 'https://quitter.se/api/statuses/public_timeline.as'
     },
     {
       name: 'quitter.is',
-      url: 'https://quitter.is'
+      url: 'https://quitter.is/',
+      apiUrl: 'https://quitter.is/'
     },
     {
       name: 'quitter.no',
-      url: 'https://quitter.no'
+      url: 'https://quitter.no/',
+      apiUrl: 'https://quitter.no/api/statuses/public_timeline.as'
     },
     {
       name: 'quitter.nu',
-      url: 'https://quitter.nu'
+      url: 'https://quitter.nu/',
+      apiUrl: 'https://quitter.nu/api/statuses/public_timeline.as'
     },
     {
       name: 'quitter.es',
-      url: 'https://quitter.es'
+      url: 'https://quitter.es/',
+      apiUrl: 'https://quitter.es/api/statuses/public_timeline.as'
     },
     {
       name: 'gnusocial.de',
-      url: 'https://gnusocial.de'
+      url: 'https://gnusocial.de/',
+      apiUrl: 'https://gnusocial.de/api/statuses/public_timeline.as'
     },
     {
       name: 'gnusocial.ch',
-      url: 'https://gnusocial.ch'
+      url: 'https://gnusocial.ch/',
+      apiUrl: 'https://gnusocial.ch/api/statuses/public_timeline.as'
     },
     {
       name: 'gnusocial.net',
-      url: 'https://gnusocial.net/'
+      url: 'https://gnusocial.net/',
+      apiUrl: 'https://gnusocial.net/api/statuses/public_timeline.as'
     },
     {
       name: 'GNU-tan',
-      url: 'https://gnutan.xyz/'
+      url: 'https://gnutan.xyz/',
+      apiUrl: 'https://gnutan.xyz/api/statuses/public_timeline.as'
     },
     {
       name: 'Shitposter Club',
-      url: 'https://shitposter.club'
+      url: 'https://shitposter.club/',
+      apiUrl: 'https://shitposter.club/api/statuses/public_timeline.as'
+    },
+    {
+      name: 'LoadAverage',
+      url: 'https://loadaverage.org/',
+      apiUrl: 'https://loadaverage.org/api/statuses/public_timeline.as'
     }
   ];
 
@@ -52,12 +67,8 @@ app.controller('InstanceStatusController', function ($scope, $http) {
     $scope.instances[key].isUp = null;
   };
 
-  for (i in $scope.instances) {
-    resetState(i);
-  }
-
   var getStatus = function (key) {
-    $http.get($scope.instances[key].url).then(
+    $http.get($scope.instances[key].apiUrl).then(
       function () {
         $scope.instances[key].isUp = true;
       },
@@ -68,6 +79,11 @@ app.controller('InstanceStatusController', function ($scope, $http) {
   };
 
   for (i in $scope.instances) {
-    getStatus(i);
+    if ($scope.instances[i].apiUrl !== '' || $scope.instances[i].apiUrl !== null) {
+      resetState(i);
+      getStatus(i);
+    } else {
+      i.isUp = null;
+    }
   }
 });
