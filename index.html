@@ -21,6 +21,7 @@ title: Home
     <thead>
       <tr>
         <th class="col-instance-name">Instance</th>
+        <th class="col-instance-version">GS Version</th>
         <th class="col-instance-status">Status</th>
       </tr>
     </thead>
@@ -28,6 +29,9 @@ title: Home
       <tr class="instance" ng-repeat="instance in instances">
         <td class="instance-name">
           <a href="{% raw %}{{ instance.url }}{% endraw %}" target="_blank">{% raw %}{{ instance.name }}{% endraw %}</a>
+        </td>
+        <td class="instance-version">
+          {% raw %}{{ instance.version }}{% endraw %}
         </td>
         <td class="instance-status" ng-class="instance.isUp === null ? 'status-error' : (instance.isUp == true ? 'status-up' : 'status-down')">
           {% raw %}{{ instance.isUp === null ? 'contacting server...' : (instance.isUp == true ? 'connection OK' : 'connection failed') }}{% endraw %}

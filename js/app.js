@@ -68,6 +68,12 @@ app.controller('InstanceStatusController', function ($scope, $http) {
     }
   ];
 
+  var getGSVersion = function (key) {
+    $http.get($scope.instances[key].url + 'api/statusnet/version.json').success(function (data) {
+      $scope.instances[key].version = data;
+    });
+  };
+
   var resetState = function (key) {
     $scope.instances[key].isUp = null;
   };
@@ -85,6 +91,7 @@ app.controller('InstanceStatusController', function ($scope, $http) {
 
   for (i in $scope.instances) {
     if ($scope.instances[i].apiUrl !== '' || $scope.instances[i].apiUrl !== null) {
+      getGSVersion(i);
       resetState(i);
       getStatus(i);
     } else {
