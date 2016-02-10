@@ -88,7 +88,7 @@ app.controller('InstanceStatusController', function ($scope, $http) {
       resetState(i);
       getStatus(i);
     } else {
-      i.isUp = null;
+      $scope.instances[i].isUp = null;
     }
   }
 });
