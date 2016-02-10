@@ -67,7 +67,7 @@ app.controller('InstanceStatusController', function ($scope, $http) {
   };
 
   var getStatus = function (key) {
-    if (key === 1) {
+    if (key === '1') {
       $http.get($scope.instances[key].url).then(
         function () {
           $scope.instances[key].isUp = true;
