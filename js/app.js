@@ -8,51 +8,51 @@ app.controller('InstanceStatusController', function ($scope, $http) {
   $scope.instances = [
     {
       name: 'quitter.se',
-      url: 'https://quitter.se',
+      url: 'https://quitter.se'
     },
     {
       name: 'quitter.is',
-      url: 'https://quitter.is',
+      url: 'https://quitter.is'
     },
     {
       name: 'quitter.no',
-      url: 'https://quitter.no',
+      url: 'https://quitter.no'
     },
     {
       name: 'quitter.nu',
-      url: 'https://quitter.nu',
+      url: 'https://quitter.nu'
     },
     {
       name: 'quitter.es',
-      url: 'https://quitter.es',
+      url: 'https://quitter.es'
     },
     {
       name: 'quitter.im',
-      url: 'https://quitter.im',
+      url: 'https://quitter.im'
     },
     {
       name: 'gnusocial.de',
-      url: 'https://gnusocial.de',
+      url: 'https://gnusocial.de'
     },
     {
       name: 'gnusocial.ch',
-      url: 'https://gnusocial.ch',
+      url: 'https://gnusocial.ch'
     },
     {
       name: 'gnusocial.net',
-      url: 'https://gnusocial.net',
+      url: 'https://gnusocial.net'
     },
     {
       name: 'GNU-tan',
-      url: 'https://gnutan.xyz',
+      url: 'https://gnutan.xyz'
     },
     {
       name: 'Shitposter Club',
-      url: 'https://shitposter.club',
+      url: 'https://shitposter.club'
     },
     {
       name: 'LoadAverage',
-      url: 'https://loadaverage.org',
+      url: 'https://loadaverage.org'
     }
   ];
 
