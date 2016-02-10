@@ -8,68 +8,56 @@ app.controller('InstanceStatusController', function ($scope, $http) {
   $scope.instances = [
     {
       name: 'quitter.se',
-      url: 'https://quitter.se/',
-      apiUrl: 'https://quitter.se/api/statuses/public_timeline.as'
+      url: 'https://quitter.se',
     },
     {
       name: 'quitter.is',
-      url: 'https://quitter.is/',
-      apiUrl: 'https://quitter.is/'
+      url: 'https://quitter.is',
     },
     {
       name: 'quitter.no',
-      url: 'https://quitter.no/',
-      apiUrl: 'https://quitter.no/api/statuses/public_timeline.as'
+      url: 'https://quitter.no',
     },
     {
       name: 'quitter.nu',
-      url: 'https://quitter.nu/',
-      apiUrl: 'https://quitter.nu/api/statuses/public_timeline.as'
+      url: 'https://quitter.nu',
     },
     {
       name: 'quitter.es',
-      url: 'https://quitter.es/',
-      apiUrl: 'https://quitter.es/api/statuses/public_timeline.as'
+      url: 'https://quitter.es',
     },
     {
       name: 'quitter.im',
-      url: 'https://quitter.im/',
-      apiUrl: 'https://quitter.im/api/statuses/public_timeline.as'
+      url: 'https://quitter.im',
     },
     {
       name: 'gnusocial.de',
-      url: 'https://gnusocial.de/',
-      apiUrl: 'https://gnusocial.de/api/statuses/public_timeline.as'
+      url: 'https://gnusocial.de',
     },
     {
       name: 'gnusocial.ch',
-      url: 'https://gnusocial.ch/',
-      apiUrl: 'https://gnusocial.ch/api/statuses/public_timeline.as'
+      url: 'https://gnusocial.ch',
     },
     {
       name: 'gnusocial.net',
-      url: 'https://gnusocial.net/',
-      apiUrl: 'https://gnusocial.net/api/statuses/public_timeline.as'
+      url: 'https://gnusocial.net',
     },
     {
       name: 'GNU-tan',
-      url: 'https://gnutan.xyz/',
-      apiUrl: 'https://gnutan.xyz/api/statuses/public_timeline.as'
+      url: 'https://gnutan.xyz',
     },
     {
       name: 'Shitposter Club',
-      url: 'https://shitposter.club/',
-      apiUrl: 'https://shitposter.club/api/statuses/public_timeline.as'
+      url: 'https://shitposter.club',
     },
     {
       name: 'LoadAverage',
-      url: 'https://loadaverage.org/',
-      apiUrl: 'https://loadaverage.org/api/statuses/public_timeline.as'
+      url: 'https://loadaverage.org',
     }
   ];
 
   var getGSVersion = function (key) {
-    $http.get($scope.instances[key].url + 'api/statusnet/version.json').success(function (data) {
+    $http.get($scope.instances[key].url + '/api/statusnet/version.json').success(function (data) {
       $scope.instances[key].version = data;
     });
   };
@@ -79,7 +67,7 @@ app.controller('InstanceStatusController', function ($scope, $http) {
   };
 
   var getStatus = function (key) {
-    $http.get($scope.instances[key].apiUrl).then(
+    $http.get($scope.instances[key].url + '/api/statuses/public_timeline.as').then(
       function () {
         $scope.instances[key].isUp = true;
       },
