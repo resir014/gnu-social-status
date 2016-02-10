@@ -12,6 +12,10 @@ Upon loading, this website will perform an HTTP request from your local connecti
 
 While this website is really useful for many people, the results on this page might not be accurate. Because HTTP requests are made locally, it could only be your internet that's acting up.
 
+## Technologies
+
+* [AngularJS](https://angularjs.org/) (v1.4.9)
+
 ## Running locally
 
 You will need:
