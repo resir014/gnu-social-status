@@ -5,6 +5,7 @@ var app = angular.module('gsStatusApp', []);
 app.controller('InstanceStatusController', function ($scope, $http) {
   var i;
 
+  // current list of instances
   $scope.instances = [
     {
       name: 'quitter.se',
@@ -63,15 +64,21 @@ app.controller('InstanceStatusController', function ($scope, $http) {
   };
 
   var resetState = function (key) {
+    // this is what is loaded the first time a page is loaded, so we could kind
+    // have like a "loading" state that we can display on the page
     $scope.instances[key].isUp = null;
   };
 
   var getStatus = function (key) {
+    // Read more about Angular's `$http` service here:
+    // https://docs.angularjs.org/api/ng/service/$http
     $http.get($scope.instances[key].url + '/api/statuses/public_timeline.as').then(
       function () {
+        // HTTP request succeeded
         $scope.instances[key].isUp = true;
       },
       function () {
+        // HTTP request failed
         $scope.instances[key].isUp = false;
       }
     );
@@ -83,6 +90,7 @@ app.controller('InstanceStatusController', function ($scope, $http) {
       resetState(i);
       getStatus(i);
     } else {
+      // this probably doesn't work for now
       $scope.instances[i].isUp = null;
     }
   }
