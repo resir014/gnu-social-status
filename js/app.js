@@ -40,6 +40,10 @@ app.controller('InstanceStatusController', function ($scope, $http) {
       url: 'https://gnusocial.ch'
     },
     {
+      name: 'gnusocial.no',
+      url: 'https://gnusocial.no'
+    },
+    {
       name: 'gnusocial.net',
       url: 'https://gnusocial.net'
     },
