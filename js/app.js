@@ -70,6 +70,8 @@ app.controller('InstanceStatusController', function ($scope, $http) {
   var resetState = function (i) {
     // this is what is loaded the first time a page is loaded, so we could kind
     // have like a "loading" state that we can display on the page
+    $scope.instances[i].ngClass = 'status-error';
+    $scope.instances[i].status = 'N/A';
     $scope.instances[i].isUp = null;
   };
 
@@ -79,25 +81,27 @@ app.controller('InstanceStatusController', function ($scope, $http) {
     $http.get($scope.instances[i].url + '/api/statuses/public_timeline.as').then(
       function (data) {
         // HTTP request succeeded
-        $scope.instances[i].status = data.status;
+        $scope.instances[i].ngClass = 'status-up';
+        $scope.instances[i].status = 'OK (' + data.status + ')';
         $scope.instances[i].isUp = true;
       },
       function (data) {
         // HTTP request failed
-        $scope.instances[i].status = data.status;
+        $scope.instances[i].ngClass = 'status-down';
+        $scope.instances[i].status = 'Error (' + data.status + ')';
         $scope.instances[i].isUp = false;
       }
     );
   };
 
   for (i in $scope.instances) {
-    if ($scope.instances[i].apiUrl !== '' || $scope.instances[i].apiUrl !== null) {
+    if ($scope.instances[i].url === '' || typeof $scope.instances[i].url === 'undefined') {
+      // if we don't have any API URLs set, don't show results
+      resetState(i);
+    } else {
       getGSVersion(i);
       resetState(i);
       getStatus(i);
-    } else {
-      // this probably doesn't work for now
-      $scope.instances[i].isUp = null;
     }
   }
 });

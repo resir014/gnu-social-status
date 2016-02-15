@@ -33,8 +33,8 @@ title: Home
         <td class="instance-version">
           {% raw %}{{ instance.version }}{% endraw %}
         </td>
-        <td class="instance-status" ng-class="instance.isUp === null ? 'status-error' : (instance.isUp == true ? 'status-up' : 'status-down')">
-          {% raw %}{{ instance.isUp === null ? 'contacting server...' : (instance.isUp == true ? 'connection OK' : 'connection failed (' + instance.status + ')') }}{% endraw %}
+        <td class="instance-status" ng-class="instance.ngClass">
+          {% raw %}{{ instance.status }}{% endraw %}
         </td>
       </tr>
     </tbody>
