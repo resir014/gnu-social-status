@@ -77,12 +77,14 @@ app.controller('InstanceStatusController', function ($scope, $http) {
     // Read more about Angular's `$http` service here:
     // https://docs.angularjs.org/api/ng/service/$http
     $http.get($scope.instances[key].url + '/api/statuses/public_timeline.as').then(
-      function () {
+      function (data, status) {
         // HTTP request succeeded
+        $scope.instances[key].status = data.status;
         $scope.instances[key].isUp = true;
       },
-      function () {
+      function (data, status) {
         // HTTP request failed
+        $scope.instances[key].status = data.status;
         $scope.instances[key].isUp = false;
       }
     );
