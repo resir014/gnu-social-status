@@ -61,31 +61,31 @@ app.controller('InstanceStatusController', function ($scope, $http) {
     }
   ];
 
-  var getGSVersion = function (key) {
-    $http.get($scope.instances[key].url + '/api/statusnet/version.json').success(function (data) {
-      $scope.instances[key].version = data;
+  var getGSVersion = function (i) {
+    $http.get($scope.instances[i].url + '/api/statusnet/version.json').success(function (data) {
+      $scope.instances[i].version = data;
     });
   };
 
-  var resetState = function (key) {
+  var resetState = function (i) {
     // this is what is loaded the first time a page is loaded, so we could kind
     // have like a "loading" state that we can display on the page
-    $scope.instances[key].isUp = null;
+    $scope.instances[i].isUp = null;
   };
 
-  var getStatus = function (key) {
+  var getStatus = function (i) {
     // Read more about Angular's `$http` service here:
     // https://docs.angularjs.org/api/ng/service/$http
-    $http.get($scope.instances[key].url + '/api/statuses/public_timeline.as').then(
+    $http.get($scope.instances[i].url + '/api/statuses/public_timeline.as').then(
       function (data, status) {
         // HTTP request succeeded
-        $scope.instances[key].status = data.status;
-        $scope.instances[key].isUp = true;
+        $scope.instances[i].status = data.status;
+        $scope.instances[i].isUp = true;
       },
       function (data, status) {
         // HTTP request failed
-        $scope.instances[key].status = data.status;
-        $scope.instances[key].isUp = false;
+        $scope.instances[i].status = data.status;
+        $scope.instances[i].isUp = false;
       }
     );
   };
