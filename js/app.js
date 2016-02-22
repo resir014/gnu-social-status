@@ -52,6 +52,14 @@ app.controller('InstanceStatusController', function ($scope, $http) {
       url: 'https://gnutan.xyz'
     },
     {
+      name: 'Freezepeach',
+      url: 'https://freezepeach.xyz'
+    },
+    {
+      name: 'Sea Lion Club',
+      url: 'https://sealion.club'
+    },
+    {
       name: 'Shitposter Club',
       url: 'https://shitposter.club'
     },
