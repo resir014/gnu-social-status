@@ -44,10 +44,6 @@ app.controller('InstanceStatusController', function ($scope, $http) {
       url: 'https://gnusocial.no'
     },
     {
-      name: 'gnusocial.net',
-      url: 'https://gnusocial.net'
-    },
-    {
       name: 'GNU-tan',
       url: 'https://gnutan.xyz'
     },
