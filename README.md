@@ -1,8 +1,8 @@
-# quitter-status
+# gnu-social-status
 
-> Monitors the status of popular Quitter (GNU Social) instances.
+> Monitors the status of popular GNU Social instances.
 
-This website checks the status of popular Quitter (GNU Social) instances. Currently, only a handful of instances are included (preferably those that support Qvitter), but [let me know](https://quitter.is/resi) if you want your instance added here and I'll consider it.
+This website checks the status of popular GNU Social instances. Currently, only a handful of instances are included (preferably those that support Qvitter), but [let me know](https://quitter.is/resi) if you want your instance added here and I'll consider it.
 
 This website was made mostly when waiting for quitter.is to go back up after the 9th February downtime. I know. Blame [@hundur](https://quitter.is/hundur).
 
@@ -26,7 +26,7 @@ You will need:
 * [Jekyll](http://jekyllrb.com/)
   (install from within Ruby: `gem install jekyll`)
 
-Clone it. ( `git clone https://github.com/resir014/quitter-status.git` )
+Clone it. ( `git clone https://github.com/resir014/gnu-social-status.git` )
 
 Then install all the bundled plugins.
 
@@ -49,7 +49,7 @@ $ grunt
 
 ## Contributing
 
-1. [Fork it](https://github.com/resir014/quitter-status/fork)
+1. [Fork it](https://github.com/resir014/gnu-social-status/fork)
 2. Create your feature branch: `git checkout -b my-new-feature`
 3. Commit your changes: `git commit -am 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
@@ -57,4 +57,4 @@ $ grunt
 
 ## License
 
-[MIT.](https://github.com/resir014/quitter-status/blob/gh-pages/LICENSE)
+[MIT.](https://github.com/resir014/gnu-social-status/blob/gh-pages/LICENSE)

@@ -1,8 +1,8 @@
 {
   "private": true,
-  "name": "quitter-status",
+  "name": "gnu-social-status",
   "version": "0.0.1",
-  "description": "Monitors the status of popular Quitter (GNU Social) instances.",
+  "description": "Monitors the status of popular GNU Social instances.",
   "author": "Resi Respati <resir014@gmail.com>",
   "engines": {
     "node": ">=0.10.0"

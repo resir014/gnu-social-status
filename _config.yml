@@ -6,10 +6,10 @@ markdown:             kramdown
 highlighter:          rouge
 
 # Site details
-title:                quitter (GNU Social) network status
+title:                GNU Social network status
 description:          "Monitors the status of popular Quitter/GNU Social instances."
 url:                  https://resir014.github.io
-baseurl:              "/quitter-status"
+baseurl:              "/gnu-social-status"
 
 # Build setup
 exclude:              ["Makefile", "Gruntfile.js", "Gemfile", "README.md", "LICENSE", "node_modules", "bower_components", "package.json", "bower.json"]
