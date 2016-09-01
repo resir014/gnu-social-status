@@ -44,10 +44,6 @@ app.controller('InstanceStatusController', function ($scope, $http) {
       url: 'https://gnusocial.no'
     },
     {
-      name: 'GNU-tan',
-      url: 'https://gnutan.xyz'
-    },
-    {
       name: 'Freezepeach',
       url: 'https://freezepeach.xyz'
     },
